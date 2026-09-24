@@ -5,7 +5,7 @@
 5) Write a constraint such that the size of array should be between 1 to 100.*/ 
 //
 //*1) Write a constraint to generate the pattern 12345
-/*class pattern;
+class pattern;
 
   rand bit[3:0] a[];
   
@@ -28,10 +28,10 @@ p1.randomize;
      $display("a=%d",p1.a); 
 
 end
-endmodule*/
+endmodule
 
 //2)write a constraint to generate the pattern 54321
-/*class pattern2;
+class pattern2;
   rand bit[3:0] a[];
   constraint c1 {a.size==5;}
   constraint c2 {foreach(a[i]){a[i]==5-i;}}
@@ -46,12 +46,12 @@ p2=new();
   p2.randomize();
   $display("a=%0d",p2.a);
 end
-endmodule*/
+endmodule
 //============================================================================
 //3) Write a constraint to generate the pattern 1 0 1 0 1 0 1 0
 //                                              1 2 3 4 5 6 7 8
 //                                              0 1 2 3 4 5 6 7 
-/*class pattern3;
+class pattern3;
   rand bit[4:0] a[];
   constraint c1 {a.size==8;}
   constraint c2 {foreach(a[i])
@@ -70,10 +70,10 @@ p3=new();
   assert(p3.randomize());
   $display("a=%p",p3.a);
 end
-endmodule*/
+endmodule
 //============================================================================
 //4) Write a constraint to generate only even numbers in an array of size 100.
-/*class pattern4;
+class pattern4;
   rand bit [7:0] a[];
   constraint c1 {a.size==100;}
 //  constraint c2 {foreach(a[i])
@@ -94,10 +94,10 @@ p4= new();
   p4.randomize();
   $display("a=%p",p4.a);
 end
-endmodule */
+endmodule 
 //============================================================================
 //5) Write a constraint such that the size of array should be between 1 to 100.
-/*class pattern5;
+class pattern5;
   rand bit [7:0] a[];
   constraint c1 {a.size() inside{[1:100]};}
   constraint c2 {foreach(a[i])
@@ -116,5 +116,5 @@ p5=new();
   $display("a=%p",p5.a);
   end 
 end
-endmodule*/
+endmodule
 //============================================================================
